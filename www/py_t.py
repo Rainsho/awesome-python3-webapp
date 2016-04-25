@@ -10,7 +10,9 @@ async def test():
 
     await orm.create_pool(loop, user='www-data', password='www-data', db='awesome')
 
-    u = User(name='Test', email='test@example.com', passwd='1234567890', image='about:blank')
+    #u = User(name='Test', email='test@example.com', passwd='1234567890', image='about:blank')
+
+    u = Blog(user_id='test_id', user_name='test_user_name', user_image='test_img', name='test_name', summary='test_summary', content='test_content')
 
     await u.save()
 
