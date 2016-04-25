@@ -5,9 +5,11 @@
 {% block beforehead %}
 
 <script>
+
 var
     ID = '{{ id }}',
     action = '{{ action }}';
+
 function initVM(blog) {
     var vm = new Vue({
         el: '#vm',
@@ -21,7 +23,7 @@ function initVM(blog) {
                         $form.showFormError(err);
                     }
                     else {
-                        return location.assign('/api/blogs/' + r.id);
+                        return location.assign('/manage/blogs');
                     }
                 });
             }
@@ -29,6 +31,7 @@ function initVM(blog) {
     });
     $('#vm').show();
 }
+
 $(function () {
     if (ID) {
         getJSON('/api/blogs/' + ID, function (err, blog) {
@@ -48,6 +51,7 @@ $(function () {
         });
     }
 });
+
 </script>
 
 {% endblock %}
