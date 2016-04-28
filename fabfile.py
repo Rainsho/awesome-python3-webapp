@@ -14,7 +14,7 @@ from fabric.api import *
 
 env.user = 'ubuntu'
 env.sudo_user = 'ubuntu'
-env.hosts = ['ec2-52-24-82-241.us-west-2.compute.amazonaws.com']
+env.hosts = ['ec2-52-39-213-112.us-west-2.compute.amazonaws.com']
 
 db_user = 'www-data'
 db_password = 'www-data'
