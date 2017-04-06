@@ -14,7 +14,7 @@ from fabric.api import *
 
 env.user = 'root'
 env.sudo_user = 'root'
-env.hosts = ['rainsho.xyz']
+env.hosts = ['rainsho.xyz:26758']
 
 db_user = 'www-data'
 db_password = 'www-data'

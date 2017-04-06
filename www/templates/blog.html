@@ -40,7 +40,13 @@ $(function () {
         <article class="uk-article">
             <h2>{{ blog.name }}</h2>
             <p class="uk-article-meta">发表于{{ blog.created_at|datetime }}</p>
-            <p id="blog_content"><!-- {{ blog.html_content|safe }} --></p>
+            <div id="blog_content"><!-- {{ blog.html_content|safe }} -->
+                <div style="text-align:center;">
+                    <img src="/static/img/spinner-rosetta-gray-32x32.gif" alt="loading...">
+                    <br />
+                    <span>loading...</span>
+                </div>
+            </div>
         </article>
 
         <hr class="uk-article-divider">
