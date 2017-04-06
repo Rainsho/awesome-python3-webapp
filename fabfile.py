@@ -12,9 +12,9 @@ import os, re
 from datetime import datetime
 from fabric.api import *
 
-env.user = 'ubuntu'
-env.sudo_user = 'ubuntu'
-env.hosts = ['ec2-52-39-213-112.us-west-2.compute.amazonaws.com']
+env.user = 'root'
+env.sudo_user = 'root'
+env.hosts = ['rainsho.xyz']
 
 db_user = 'www-data'
 db_password = 'www-data'
