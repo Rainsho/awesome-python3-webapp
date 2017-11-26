@@ -14,7 +14,7 @@ from fabric.api import *
 
 env.user = 'root'
 env.sudo_user = 'root'
-env.hosts = ['rainsho.xyz:26758']
+env.hosts = ['rainsho.cc:26758']
 
 db_user = 'www-data'
 db_password = 'www-data'
@@ -47,8 +47,9 @@ def backup():
 def build():
     '''
     Build dist package.
+    Remove 'favicon.ico', 'transwarp', 
     '''
-    includes = ['static', 'templates', 'transwarp', 'favicon.ico', '*.py']
+    includes = ['static', 'templates', '*.py']
     excludes = ['test', '.*', '*.pyc', '*.pyo']
     local('rm -f dist/%s' % _TAR_FILE)
     with lcd(os.path.join(_current_path(), 'www')):
